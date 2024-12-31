@@ -22,13 +22,16 @@ int pop() {
         return 0;
     }
 
-    int temp = stack[top--];
-    return temp;
+    int tempData = stack[top--];
+
+    printf("\n%d popped from stack", tempData);
+
+    return tempData;
 }
 
 void display() {
     printf("\n\n");
-    for(int i = 0; i< MAX; i++) {
+    for(int i = 0; i<= top; i++) {
         if(stack[i] != 0)
         printf("%d\t", stack[i]);
     }
@@ -39,6 +42,11 @@ int main() {
     push(5);
     push(9);
     push(30);
+
+    display();
+
+    pop();
+    pop();
 
     display();
 
